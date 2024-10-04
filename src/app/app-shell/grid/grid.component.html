@@ -1,0 +1,20 @@
+<main id="mainContent">
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <h3>Syncfusion Angular Grid</h3>
+      <ejs-grid #grid [dataSource]='data' [allowSorting]="true" [allowPaging]="true" [allowFiltering]="true"
+        [allowGrouping]="true" [pageSettings]='pageSettings' [toolbar]="toolbarItems" [allowPdfExport]="true"
+        (toolbarClick)="toolbarClickHandler($event)" (load)="loadEventHandler()" (created)="createdHandler()" (rowDataBound)="rowDataBoundHandler($event)"
+        (dataBound)="dataBoundHandler($event)">
+        <e-columns>
+          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+          <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+          <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+          <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' width=120></e-column>
+        </e-columns>
+      </ejs-grid>
+    </div>
+
+    <input type="date" value="2024-08-14" />
+  </div>
+</main>
