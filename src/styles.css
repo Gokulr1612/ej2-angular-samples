@@ -21,6 +21,8 @@
 @import '../node_modules/@syncfusion/ej2-angular-schedule/styles/tailwind.css';
 @import '../node_modules/@syncfusion/ej2-angular-richtexteditor/styles/tailwind.css';
 @import '../node_modules/@syncfusion/ej2-angular-documenteditor/styles/tailwind.css';
+@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/tailwind.css';
+
 
 
 html {

@@ -6,6 +6,7 @@ import { SyncRteModule } from './app-shell/rte/rte.module'
 import { SyncGridModule } from './app-shell/grid/grid.module'
 import { SyncChartModule } from './app-shell/chart/chart.module'
 import { SyncNumericTextModule } from './app-shell/numeric-text-box/numeric-text-box.module'
+import { SyncPdfViewerModule } from './app-shell/pdf-viewer/pdf-viewer.component.module'
 
 export const routes: Routes = [
   {
@@ -35,6 +36,10 @@ export const routes: Routes = [
   {
     path: 'numeric',
     loadChildren: async (): Promise<Type<SyncNumericTextModule>> => await import('./app-shell/numeric-text-box/numeric-text-box.module').then(module => module.SyncNumericTextModule)
+  },
+  {
+    path: 'pdf-viewer',
+    loadChildren: async (): Promise<Type<SyncPdfViewerModule>> => await import('./app-shell/pdf-viewer/pdf-viewer.component.module').then(module => module.SyncPdfViewerModule)
   }
 ]
 

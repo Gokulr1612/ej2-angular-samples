@@ -1,0 +1,13 @@
+<p>pdf-viewer works!</p>
+<div class="content-wrapper">
+    <button ejs-button content="Add Download" (click)="onclick()">Button</button>
+    <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]='document'
+        [resourceUrl]='resource' 
+        style="height:640px;display:block"
+        [toolbarSettings]="toolSettings"
+        >
+    </ejs-pdfviewer>
+ </div>

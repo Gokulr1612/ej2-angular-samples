@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common'
 
 import { GridComponent } from './grid.component'
 import { GridRoutingModule } from './grid-routing.module'
-import { GridAllModule, PdfExportService, ToolbarService, PageService, SortService, FilterService, GroupService } from '@syncfusion/ej2-angular-grids'
+import { GridAllModule, PdfExportService, ToolbarService, PageService, SortService, FilterService, GroupService, AggregateService  } from '@syncfusion/ej2-angular-grids'
 
 @NgModule({
   declarations: [GridComponent],
@@ -17,6 +17,7 @@ import { GridAllModule, PdfExportService, ToolbarService, PageService, SortServi
     FilterService,
     GroupService,
     PdfExportService,
-    ToolbarService]
+    ToolbarService,
+    AggregateService ]
 })
 export class SyncGridModule { }

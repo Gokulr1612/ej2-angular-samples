@@ -2,19 +2,30 @@
   <div class="container">
     <div class="row justify-content-center py-5">
       <h3>Syncfusion Angular Grid</h3>
-      <ejs-grid #grid [dataSource]='data' [allowSorting]="true" [allowPaging]="true" [allowFiltering]="true"
+      <ejs-grid #grid [dataSource]='data' [allowSorting]="true" [allowPaging]="true" 
         [allowGrouping]="true" [pageSettings]='pageSettings' [toolbar]="toolbarItems" [allowPdfExport]="true"
-        (toolbarClick)="toolbarClickHandler($event)" (load)="loadEventHandler()" (created)="createdHandler()" (rowDataBound)="rowDataBoundHandler($event)"
-        (dataBound)="dataBoundHandler($event)">
+        (toolbarClick)="toolbarClickHandler($event)" (load)="loadEventHandler()" (created)="createdHandler()"
+        (rowDataBound)="rowDataBoundHandler($event)" (dataBound)="dataBoundHandler($event)"
+        [groupSettings]='groupOptions' [aggregates]="aggregates">
         <e-columns>
-          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
-          <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-          <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
-          <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' width=120></e-column>
+          <e-column field='ChatID' headerText='ChatID' width='140' textAlign='Right' isPrimaryKey='true'>
+            <ng-template #template let-data>
+              <div>
+                  <a href="https://support.syncfusion.com/agent/chat?brandids=6&filterid=1&conversationid={{data.ChatID}}" target="_blank" >
+                  {{data.ChatID}}
+                  </a>
+              </div>
+          </ng-template>
+          </e-column>
+          <e-column field='Agent' headerText='Agent' width='140'></e-column>
+          <e-column field='Category' headerText='Category' width='140' textAlign='Right'></e-column>
+          <e-column field='Control' headerText='Control' width='120' textAlign='Right'></e-column>
+          <e-column field="CreatedOnDate" headerText="Created On"  [format]="dateFormatOptions"></e-column>
+          <e-column field="ClosedOnDate" headerText="Closed On"  [format]="dateFormatOptions"></e-column>
+          <e-column field="TimeSpent" [format]='formatoptions' headerText='TimeSpent' width='150' textAlign="Right">
+          </e-column>
         </e-columns>
       </ejs-grid>
     </div>
-
-    <input type="date" value="2024-08-14" />
   </div>
 </main>

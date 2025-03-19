@@ -12,15 +12,15 @@ import { SyncRteModule } from './app-shell/rte/rte.module'
 import { SyncDocumentEditorModule } from './app-shell/document-editor/document-editor.module'
 
 import { registerLicense } from '@syncfusion/ej2-base';
-import { NumericTextComponent } from './app-shell/numeric-text-box/numeric-text-box.component'
+import { NumericTextComponent } from './app-shell/numeric-text-box/numeric-text-box.component';
+import { PdfViewerComponent } from './app-shell/pdf-viewer/pdf-viewer.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    FooterComponent,
-    
+    FooterComponent    
   ],
   imports: [
     BrowserModule,
